@@ -1,0 +1,86 @@
+<html>
+<body>
+	<div class="ui-page" id="exercise">
+		<header class="ui-header">
+			<h2 class="ui-title">Exercise</h2>
+		</header>
+		<div class="ui-content content-padding">
+			<div class="ui-page ui-page-active" id="main">
+				<ul id="exerciseList" class="ui-listview">
+				<!-- WEIGHT NUMBER SELECTOR -->
+					<li>					
+						<h2 class="selection-title">Weight</h2>
+						<span id="lastWeight"></span>							
+								
+						<table width="100%">
+							<tr>
+								<td>
+									<button type="button"
+										class="btn-number-pick btn-up ui-btn ui-btn-icon"
+										style="background-image: url(images/up.png);"></button>
+								</td>
+								<td class="number-cell"><span class="selection-number">23</span></td>
+								<td>
+									<button type="button"
+										class="btn-number-pick btn-down ui-btn ui-btn-icon"
+										style="background-image: url(images/down.png);"></button>
+								</td>
+							</tr>
+						</table>						
+					</li>				
+					
+					<!-- REPS NUMBER SELECTOR -->
+					<li>
+						<h2 class="selection-title">Reps</h2>
+						<span id="lastReps"></span>							
+								
+						<table width="100%">
+							<tr>
+								<td>
+									<button type="button"
+										class="btn-number-pick btn-up ui-btn ui-btn-icon"
+										style="background-image: url(images/up.png);"></button>
+								</td>
+								<td class="number-cell"><span class="selection-number">23</span></td>
+								<td>
+									<button type="button"
+										class="btn-number-pick btn-down ui-btn ui-btn-icon"
+										style="background-image: url(images/down.png);"></button>
+								</td>
+							</tr>
+						</table>
+					</li>		
+					
+					<!-- SETS NUMBER SELECTOR -->
+					<li>
+						<h2 class="selection-title">Sets</h2>
+						<span id="lastSets"></span>							
+								
+						<table width="100%">
+							<tr>
+								<td>
+									<button type="button"
+										class="btn-number-pick btn-up ui-btn ui-btn-icon"
+										style="background-image: url(images/up.png);"></button>
+								</td>
+								<td class="number-cell"><span class="selection-number">23</span></td>
+								<td>
+									<button type="button"
+										class="btn-number-pick btn-down ui-btn ui-btn-icon"
+										style="background-image: url(images/down.png);"></button>
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<footer class="ui-footer">
+			<a href="#" onclick="window.history.back();"
+				class="btn-text ui-inline ui-btn">Back</a> <a href="#"
+				class="btn-text ui-btn ui-inline" onclick="logTest();">Log</a> <a
+				href="#" class="btn-text ui-btn ui-inline" onclick="saveToFile();">Save</a>
+		</footer>
+	</div>
+</body>
+</html>
