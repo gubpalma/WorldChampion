@@ -50,11 +50,23 @@ body {
 }
 
 .btn-half {
-	width: 50% !important;	
+	width: 45% !important;	
+	margin: auto;
+}
+
+.btn-back {
+	float: left !important;	
+}
+
+.btn-log {
+	float: right !important;	
 }
 
 .selection-title {
 	font-size: 2.5rem !important;	
+	margin-top: 4px !important;
+	margin-bottom: 4px !important;
+	color: #bee1ff !important;
 }
 
 .selection-number {
@@ -67,6 +79,9 @@ body {
 
 .previous {
 	text-align: center !important;
+	margin-top: 4px !important;
+	margin-bottom: 4px !important;
+	color: #4296ff !important;
 }
 
 .button-bar {
@@ -77,4 +92,11 @@ body {
 	position: absolute !important;
 	top: 2px !important;
 	right: 8px !important;
+}
+
+.ui-listview li {
+	margin-bottom: 10px !important;
+	min-height: 0px !important;
+	line-height: normal !important;
+	display: block !important;
 }

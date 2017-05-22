@@ -185,7 +185,7 @@ function logEntry() {
 	saveToFile();
 	
 	var logToast = document.getElementById("logToast");
-	tau.openPopup(logToast);
+	tau.openPopup(logToast);	
 }
 
 function navigateDay(day) {
