@@ -2,84 +2,100 @@
 <body>
 	<div class="ui-page" id="exercise">
 		<header class="ui-header">
-			<h2 class="ui-title">Exercise</h2>
+			<h2 class="ui-title" id="exerciseTitle">Exercise</h2>
 		</header>
 		<div class="ui-content content-padding">
-			<div class="ui-page ui-page-active" id="main">
-				<ul id="exerciseList" class="ui-listview">
+			<ul id="exerciseList" class="ui-listview">
 				<!-- WEIGHT NUMBER SELECTOR -->
-					<li>					
-						<h2 class="selection-title">Weight</h2>
-						<span id="lastWeight"></span>							
-								
-						<table width="100%">
-							<tr>
-								<td>
-									<button type="button"
-										class="btn-number-pick btn-up ui-btn ui-btn-icon"
-										style="background-image: url(images/up.png);"></button>
-								</td>
-								<td class="number-cell"><span class="selection-number">23</span></td>
-								<td>
-									<button type="button"
-										class="btn-number-pick btn-down ui-btn ui-btn-icon"
-										style="background-image: url(images/down.png);"></button>
-								</td>
-							</tr>
-						</table>						
-					</li>				
-					
-					<!-- REPS NUMBER SELECTOR -->
-					<li>
-						<h2 class="selection-title">Reps</h2>
-						<span id="lastReps"></span>							
-								
-						<table width="100%">
-							<tr>
-								<td>
-									<button type="button"
-										class="btn-number-pick btn-up ui-btn ui-btn-icon"
-										style="background-image: url(images/up.png);"></button>
-								</td>
-								<td class="number-cell"><span class="selection-number">23</span></td>
-								<td>
-									<button type="button"
-										class="btn-number-pick btn-down ui-btn ui-btn-icon"
-										style="background-image: url(images/down.png);"></button>
-								</td>
-							</tr>
-						</table>
-					</li>		
-					
-					<!-- SETS NUMBER SELECTOR -->
-					<li>
-						<h2 class="selection-title">Sets</h2>
-						<span id="lastSets"></span>							
-								
-						<table width="100%">
-							<tr>
-								<td>
-									<button type="button"
-										class="btn-number-pick btn-up ui-btn ui-btn-icon"
-										style="background-image: url(images/up.png);"></button>
-								</td>
-								<td class="number-cell"><span class="selection-number">23</span></td>
-								<td>
-									<button type="button"
-										class="btn-number-pick btn-down ui-btn ui-btn-icon"
-										style="background-image: url(images/down.png);"></button>
-								</td>
-							</tr>
-						</table>
-					</li>
-				</ul>
+				<li>
+					<p class="selection-title">Weight</p>
+					<p class="previous" id="lastWeight"></p>
+
+					<table width="100%">
+						<tr>
+							<td>
+								<button type="button"
+									class="btn-number-pick btn-down ui-btn ui-btn-icon"
+									onclick="weightUp();"
+									style="background-image: url(images/down.png);"></button>
+
+							</td>
+							<td class="number-cell"><span class="selection-number"
+								id="currentWeight"></span></td>
+							<td>
+								<button type="button"
+									class="btn-number-pick btn-up ui-btn ui-btn-icon"
+									onclick="weightDown();"
+									style="background-image: url(images/up.png);"></button>
+							</td>
+						</tr>
+					</table>
+				</li>
+
+				<!-- REPS NUMBER SELECTOR -->
+				<li>
+					<p class="selection-title">Reps</p>
+					<p class="previous" id="lastReps"></p>
+
+					<table width="100%">
+						<tr>
+							<td>
+								<button type="button"
+									class="btn-number-pick btn-down ui-btn ui-btn-icon"
+									onclick="repsUp();"
+									style="background-image: url(images/down.png);"></button>
+
+							</td>
+							<td class="number-cell"><span class="selection-number"
+								id="currentReps"></span></td>
+							<td>
+								<button type="button"
+									class="btn-number-pick btn-up ui-btn ui-btn-icon"
+									onclick="repsDown();"
+									style="background-image: url(images/up.png);"></button>
+							</td>
+						</tr>
+					</table>
+				</li>
+
+				<!-- SETS NUMBER SELECTOR -->
+				<li>
+					<p class="selection-title">Sets</p>
+					<p class="previous" id="lastSets"></p>
+
+					<table width="100%">
+						<tr>
+							<td>
+								<button type="button"
+									class="btn-number-pick btn-down ui-btn ui-btn-icon"
+									onclick="setsDown();"
+									style="background-image: url(images/down.png);"></button>
+							</td>
+							<td class="number-cell"><span class="selection-number"
+								id="currentSets"></span></td>
+							<td>
+								<button type="button"
+									class="btn-number-pick btn-up ui-btn ui-btn-icon"
+									onclick="setsUp();"
+									style="background-image: url(images/up.png);"></button>
+
+							</td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+			
+			<!-- Log confirmation toast -->
+			<div id="logToast" data-role="popup" class="ui-popup ui-popup-toast">
+				<div class="ui-popup-content">Entry logged.</div>
 			</div>
 		</div>
 		<footer class="ui-footer">
-			<a href="#" onclick="window.history.back();"
-				class="btn-text ui-inline ui-btn">Back</a> <a href="#"
-				class="btn-text ui-btn ui-inline" onclick="logTest();">Log</a> <a
-				href="#" class="btn-text ui-btn ui-inline" onclick="saveToFile();">Save</a>
+			<div class="button-bar">
+				<a href="#" onclick="window.history.back();"
+					class="btn-text ui-btn btn-half">Back</a> <a href="#"
+					class="btn-text ui-btn btn-half" onclick="logEntry();">Log</a>
+			</div>
 		</footer>
 	</div>
 </body>

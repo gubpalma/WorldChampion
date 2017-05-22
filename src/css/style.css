@@ -30,10 +30,16 @@ body {
 
 .btn-up {
 	float: left;
+	background-color:rgba(0, 0, 0, 0.0) !important;	
 }
 
 .btn-down {
 	float: right;
+	background-color:rgba(0, 0, 0, 0.0) !important;
+}
+
+.btn-trash {	
+	background-color:rgba(0, 0, 0, 0.0) !important;
 }
 
 .btn-text {
@@ -41,6 +47,10 @@ body {
 	overflow-wrap: break-word !important;
 	text-overflow: initial !important;
 	white-space: normal !important;
+}
+
+.btn-half {
+	width: 50% !important;	
 }
 
 .selection-title {
@@ -53,4 +63,18 @@ body {
 
 .number-cell {
 	text-align: center !important;	
+}
+
+.previous {
+	text-align: center !important;
+}
+
+.button-bar {
+	display: flex !important;
+}
+
+.wipe-icon {
+	position: absolute !important;
+	top: 2px !important;
+	right: 8px !important;
 }
